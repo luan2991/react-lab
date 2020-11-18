@@ -1,0 +1,10 @@
+.box-list {
+	display: flex;
+	list-style-type: none;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	padding: 0 10px;
+	li {
+		margin: 0 10px;
+	}
+}
