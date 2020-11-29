@@ -7,8 +7,8 @@ const sizeMap = {
   large: '120px',
 };
 
-function Box( {box, onClick} ) {
-  const { color ='black', luckyNumber, size ='medium' } = box;
+function Box( {box, onClick, children} ) {
+  const { color ='black', size ='medium' } = box;
   const height = sizeMap[size];
   const width = sizeMap[size];
   const hanldeRemoveClick =()=>{
@@ -16,7 +16,8 @@ function Box( {box, onClick} ) {
   }
   return (
     <div className="color-box " style={{ backgroundColor: color, height, width }}>
-      {luckyNumber}
+     
+      {children}
       <button onClick={hanldeRemoveClick}>Remove</button>
     </div>
   );
@@ -25,10 +26,12 @@ function Box( {box, onClick} ) {
 Box.propTypes = {
   box: PropTypes.object,
   onClick: PropTypes.func,
+  
 };
 
 Box.defaultProps = {
   box: {},
   onClick:null,
+
 };
 export default Box;
