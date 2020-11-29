@@ -9,3 +9,17 @@
         font-weight: bold;
     }
 }
+
+
+/* The element to apply the animation to */
+.dashed-loading {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
